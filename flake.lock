@@ -1,0 +1,42 @@
+{
+  "nodes": {
+    "ghc-nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651190303,
+        "narHash": "sha256-UCwuMeUl0B6gfokeb6XW97LzTlN6POesy8vrMbEbDmE=",
+        "owner": "matthewbauer",
+        "repo": "ghc-nix",
+        "rev": "eb991023e42dafddd58485ba8349f091dfc17043",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matthewbauer",
+        "repo": "ghc-nix",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1651114127,
+        "narHash": "sha256-/lLC0wkMZkAdA5e1W76SnJzbhfOGDvync3VRHJMtAKk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6766fb6503ae1ebebc2a9704c162b2aef351f921",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "ghc-nix": "ghc-nix",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
