@@ -15,13 +15,13 @@
     overlays.default = final: prev: {
       haskellPackages = prev.haskell.packages.${compiler}.override {
         overrides = hfinal: hprev: {
-          ghc-nix = hprev.callCabal2nix "ghc-nix" "${ghc-nix}/ghc-nix" {};
-          fused-effects = hprev.callCabal2nix "fused-effects" self {};
+          ghc-nix = hfinal.callCabal2nix "ghc-nix" "${ghc-nix}/ghc-nix" {};
+          fused-effects' = hfinal.callCabal2nix "fused-effects" self {};
         };
       };
     };
     packages = forAllSystems (system: {
-      inherit (nixpkgsFor.${system}.haskellPackages) fused-effects ghc-nix;
+      fused-effects = nixpkgsFor.${system}.haskellPackages.fused-effects';
       default = self.packages.${system}.fused-effects;
     });
     devShells = forAllSystems (system: {
