@@ -26,10 +26,11 @@
     });
     devShells = forAllSystems (system: {
       fused-effects = self.packages.${system}.fused-effects.env.overrideAttrs (old: {
-        buildInputs = old.nativeBuildInputs ++ (with nixpkgsFor.${system}.haskellPackages; [cabal-install ghc-nix]);
-        nativeBuildInputs = old.nativeBuildInputs
-          ++ (with nixpkgsFor.${system}.haskellPackages; [cabal-install ghc-nix])
-          ++ (with nixpkgsFor.${system}; [hyperfine]);
+        nativeBuildInputs = old.nativeBuildInputs ++ [
+          nixpkgsFor.${system}.haskellPackages.cabal-install
+          nixpkgsFor.${system}.haskellPackages.ghc-nix
+          nixpkgsFor.${system}.hyperfine
+        ];
       });
       default = self.devShells.${system}.fused-effects;
     });
