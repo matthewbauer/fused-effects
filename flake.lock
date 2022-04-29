@@ -3,11 +3,11 @@
     "ghc-nix": {
       "flake": false,
       "locked": {
-        "lastModified": 1651190303,
-        "narHash": "sha256-UCwuMeUl0B6gfokeb6XW97LzTlN6POesy8vrMbEbDmE=",
+        "lastModified": 1651260848,
+        "narHash": "sha256-YNx5qMwhzCM4ViAqKUDtazl8/twcdgCcNpuHgX1n3+0=",
         "owner": "matthewbauer",
         "repo": "ghc-nix",
-        "rev": "eb991023e42dafddd58485ba8349f091dfc17043",
+        "rev": "3a78d98e2d675084c637c9d133d80ec612a29cd3",
         "type": "github"
       },
       "original": {
